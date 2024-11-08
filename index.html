@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="falling-hearts-container"></div> <!-- Falling hearts container -->
+
+    <div class="container">
+        <!-- Left Section: Score and Heart -->
+        <div class="left-side">
+            <div class="score-display">
+                <h1><span id="score">0</span></h1> <!-- Just show the number -->
+                <h3>Hearts/sec: <span id="hearts-per-second">0</span></h3> <!-- Hearts per second -->
+            </div>
+            <div class="heart-clicker" id="heart-clicker">
+                <!-- Heart SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Right Section: Buildings -->
+        <div class="right-side">
+            <h2>Upgrades</h2>
+            <ul id="buildings-list">
+                <li id="cursor" class="building" data-cost="20" data-power="1">0 Cursor (1 heart/sec) - Cost: 20 hearts</li>
+                <li id="heart-transplant" class="building" data-cost="150" data-power="10">0 Heart Transplant (10 hearts/sec) - Cost: 150 hearts</li>
+                <li id="heart-factory" class="building" data-cost="500" data-power="25">0 Heart Factory (25 hearts/sec) - Cost: 500 hearts</li>
+                <li id="heart-laboratory" class="building" data-cost="2000" data-power="100">0 Heart Laboratory (100 hearts/sec) - Cost: 2000 hearts</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
